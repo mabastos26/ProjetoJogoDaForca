@@ -13,13 +13,27 @@
         <div class="container">
             <div class="instrucoes">
                 <h2>Digite uma palavra secreta:</h2>
-                <input class="input" type="password" id="palavraSecreta">
+                <input class="input" type="password" id="palavraSecreta" onkeyup="checaPalavra()"/>
                 <a class='btn' id="forca" href="./jogo.html">iniciar o jogo</a>
             </div>
             
            
             <script>
+                 function checaPalavra(){
+                    let entrada=document.querySelector("#palavraSecreta");
+                    const regExp=/[^a-z]/ig;
+                    let palavra= entrada.value;
+                    console.log(palavra);
+                    let achouSimbolo=regExp.test(palavra);
+                    console.log(achouSimbolo);
+                    if(achouSimbolo){
+                        alert("A palavra deve conter apenas letras!!");
+                        entrada.value='';
+                    }
+
+                }
                 var btn = document.querySelector("#forca");
+               
         
                 btn.addEventListener("click", function () {
                     var text = document.querySelector("#palavraSecreta").value;
