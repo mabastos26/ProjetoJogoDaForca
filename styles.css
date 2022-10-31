@@ -1,0 +1,76 @@
+/*Inicializando toda a página*/
+*{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: black;
+}
+
+/*Estilizar o header*/
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+    border-bottom: 5px rgb(7, 98, 36) solid;
+    
+}
+/*Estilizando  o container1 da index HTML*/
+.container {
+    min-height: 80vh;
+    padding: 30px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('./imagensForca/jogo-da-forcas.png');
+}
+
+.instrucoes{
+    display:flex; 
+    align-items: center;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #eee;
+    align: center;
+    border: solid 4px #555;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left:10px;
+    transition: 0.5s;
+    
+}
+
+.btn:hover{
+    background-color: #ccc;
+}
+
+.input{
+    max-height: 25px;
+}
+
+#palavraSecreta li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px;
+    text-transform: uppercase;
+    color: white;
+
+}
+
+#imagem{
+    max-width: 500px;
+    margin: 10px;
+}
+
+
+footer{
+    background-color: #eee;
+    border-top: 5px rgb(7, 98, 36) solid;
+    padding: 20px;
+    min-height: 10vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}

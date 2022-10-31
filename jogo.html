@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset='utf-8'>
+    <title>FrontEnd-Atividade3</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src='codigo.js'></script>
+</head>
+    <body onload="iniciar()">
+        <header>
+            <h1>Jogo da forca</h1>
+        </header>
+        <div class="container">           
+            <h3 id="escolha">Escolha uma letra:</h2>
+            <input class="input" type="text" id="letra">
+            <input class="btn" id='verificar' type="submit" value="verificar" onclick="verificarLetra()"/>
+            <ul id="palavraSecreta">
+            </ul>
+            <div id="fimJogo"></div>
+            <section>
+                <img id='imagem' src="./imagensForca/forca_vazia.gif" alt="Imagem não carregada">   
+            </section>
+        </div>
+        <footer>
+            <p>Atividade 3 da unidade 2, Pós-Graduação em Desenvolvimento Web Unyleya &#169 2022</p>
+        </footer> 
+    </body>
+</html>
