@@ -5,7 +5,16 @@ var fase;
 var letraDescoberta;
 
 
+
+
 function iniciar(){ 
+        const btn=document.querySelector("#verificar");
+        document.addEventListener("keypress", function(e){
+            if(e.key==="Enter"){
+                btn.click();
+            }
+        
+        })
         acertou=0;
         fase=0;
         palavraSecreta =  localStorage.getItem('valueText'); 
@@ -19,7 +28,20 @@ function iniciar(){
                 
  }
 
+ function checaSomenteLetra(){
+    var entradaTentativa=document.getElementById('letra');
+    const regExp=/[^a-z]/ig;
+    let letra= entradaTentativa.value;
+    let achouSimbolo=regExp.test(letra);
+    if(achouSimbolo){
+        alert("Não são aceitos símbolos como entrada, apenas letras!!");
+        entradaTentativa.value='';
+    }
+
+}
+
 function verificarLetra(){
+    checaSomenteLetra();
     var errou=0;
     var imagem=document.querySelector("#imagem");
     var entradaTentativa=document.getElementById('letra');

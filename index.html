@@ -13,12 +13,14 @@
         <div class="container">
             <div class="instrucoes">
                 <h2>Digite uma palavra secreta:</h2>
-                <input class="input" type="password" id="palavraSecreta" onkeyup="checaPalavra()"/>
+                <input class="input" type="password" id="palavraSecreta" onkeyup="checaPalavra()" required/>
                 <a class='btn' id="forca" href="./jogo.html">iniciar o jogo</a>
             </div>
             
            
             <script>
+               var btn = document.querySelector("#forca");
+               //Checa se a palavra possui apenas letras v
                  function checaPalavra(){
                     let entrada=document.querySelector("#palavraSecreta");
                     const regExp=/[^a-z]/ig;
@@ -32,9 +34,17 @@
                     }
 
                 }
-                var btn = document.querySelector("#forca");
-               
-        
+                //Checa se a palavra possui apenas letras ^
+
+                //Ativa o click do botao quando pressionado enter v
+                 document.addEventListener("keypress", function(e){
+                    if(e.key==="Enter"){
+                        btn.click();
+                    }
+
+                })
+                //Ativa o click do botao quando pressionado enter ^
+                
                 btn.addEventListener("click", function () {
                     var text = document.querySelector("#palavraSecreta").value;
                     localStorage.setItem('valueText', text);
